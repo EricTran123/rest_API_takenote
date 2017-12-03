@@ -14,6 +14,7 @@ exports.create = function(req, res) {
             console.log(err);
             res.status(500).send({message: "Some error ocuured while creating the Note."});
         } else {
+            console.log("Note is added successfully: \n" + data);
             res.send(data);
         }
     });
@@ -29,13 +30,12 @@ exports.findAll = function(req, res) {
         }
     });
 };
-
 exports.findOne = function(req, res) {
-    // Find a single note with a noteId
     Note.findById(req.params.noteId, function(err, data) {
         if(err) {
             res.status(500).send({message: "Could not retrieve note with id " + req.params.noteId});
         } else {
+            console.log("Note with id: " + req.params.noteId + "\n" + data);
             res.send(data);
         }
     });
