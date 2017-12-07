@@ -5,6 +5,8 @@ var NoteSchema = new Schema({
     title: {
         type: String,
         trim: true,
+        required: true,
+        default: ''
     },
     content: {
         type: String,
@@ -14,6 +16,7 @@ var NoteSchema = new Schema({
     author: {
         type: String,
         trim: true,
+        default: ''
     },
     price: {
         type: Number,
