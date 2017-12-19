@@ -7,5 +7,5 @@ var driverSchema = new Schema({
         required: true
     },
 });
-module.exports = mongoose.model('Driver', NoteSchema);
+module.exports = mongoose.model('Driver', driverSchema);
 

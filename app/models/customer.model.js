@@ -1,20 +1,20 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var customerSchema = new Schema({
-    name:{
+    name: {
         type: String,
         trim: true,
         required: true
     },
-    address:{
+    address: {
         type: String,
         trim: true,
         required: true,
     },
-    phoneNumber:{
+    phoneNumber: {
         type: String,
         trim: true,
-        require;
+        required: true
     }
 });
-module.exports = mongoose.model('Driver', NoteSchema);
+module.exports = mongoose.model('Driver', customerSchema);
